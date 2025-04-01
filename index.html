@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio Website Design</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+     <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-a"></i>
+                    <div class="logo-text">Portfolio</div>
+                </div>
+                 <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <ul class="navlinks">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#Projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                 <div class="hero-pic">
+                    <img src="profile.jpg" alt="profile pic">
+                 </div>
+                 <div class="hero-text">
+                    <h5>Hi I'm <span class="input">Frontend Developer</span></h5>
+                    <h1>Abhijeet Jadhav</h1>
+                    <p> Hi, I'm Abhijeet Jadhav, a passionate web Developer with a knack for creating a dynamic,
+                        user-friendly, and Responsive websites. With expertise in front-end and back-end development,
+                        I specialize in turning ideas into seamless digital experiences.
+                    </p>
+
+                    <div class="btn-group">
+                       <a href="#" class="btn active">Download CV</a>
+                       <a href="#" class="btn">Contact</a>
+                    </div>
+
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                        <a href="#"><i class="fa-brands fa-pintrest"></i></a>
+                    </div>
+                 </div>
+            </div>
+        </div>
+     </div>
+     <h2>Skills</h2>
+     <section class="skills"> 
+    
+        <div class="skill">
+            <div class="progress-title">
+                <h3 style="color: whitesmoke;">HTML</h3>
+                <span class="progress-value" style="color: whitesmoke;">80%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" data-num="80%"></div>
+            </div>
+        </div>
+    
+        <div class="skill">
+            <div class="progress-title">
+                <h3 style="color: whitesmoke;">CSS</h3>
+                <span class="progress-value" style="color: whitesmoke">70%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" data-num="70%"></div>
+            </div>
+        </div>
+    
+        <div class="skill">
+            <div class="progress-title">
+                <h3 style="color: whitesmoke;">JavaScript</h3>
+                <span class="progress-value" style="color: whitesmoke;">60%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" data-num="60%"></div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+     <script>
+        /** creating button click show hide navbar **/
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+
+        var typed=new Typed(".input",{
+            strings:["Frontend Developer","UX Designer","Web Developer"],
+            typedSpeed:70,
+            backSpeed:55,
+            loop:true
+        })
+     </script>
+     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const progressBars = document.querySelectorAll(".progress-fill");
+
+    progressBars.forEach(bar => {
+        const percentage = bar.getAttribute("data-num");
+        bar.style.width = 0; // Start from 0
+        bar.style.background = "#4CAF50"; // Set the fill color
+        
+        setTimeout(() => {
+            bar.style.transition = "width 1.5s ease-in-out";
+            bar.style.width = percentage;
+        }, 300);
+    });
+});
+
+     </script>
+</body>
+</html>
+   
+</body>
+</html>
